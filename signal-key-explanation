@@ -1,0 +1,53 @@
+SA_NOCLDSTOP
+- sig가 SIGCHLD인 경우, 시그널을 추출한 결과로 자식프로세스가 멈추거나 재개될 때,
+  이 시그널을 생성하지 않는다.
+
+SA_NOCLDWAIT
+- sig가 SIGCHLD인 경우에, 자식들이 제거될 때 좀비로 변하지 않는다.
+
+SA_NODEFER
+- 이 시그널이 잡히면, 핸들러가 실행 중일때 프로세스 시그널 마스크에 자동적으로 추가하지 않는다.
+
+SA_ONSTACK
+- sigaltstack()에 설치된 대체 스택을 사용해 이 시그널에 대한 핸들러를 실행한다.
+
+SA_RESEHAND
+- 이 시그널이 잡히면, 핸들러를 실행하기 전에 기본 속성(SIG_DLF)으로 변경한다.
+
+SA_RESTART
+- 시그널 핸들러에 의해 중지된 시스템 호출을 자동적으로 재시작한다.
+
+SA_SIGINFO
+- 시그널에 대한 더 많은 정보를 제공하는 추가적인 인자로 시그널 핸들러를 실행한다.
+
+
+
+
+
+Kill 함수를 이용하여 시그널 보내기
+- signal을 전송하기 위한 가장 간단한 방법은 kill(2) 시스템함수를 이용하는 것
+
+#include <sys/types.h>
+#include <signal.h>
+
+int kill(pid_t pid, int sig) ;
+
+
+
+Raise() 시그널 전송
+- 프로세스 자기 자신에게 시그널을 보낼 때 사용된다.
+
+#include <sys/types.h>
+#include <signal.h>
+
+int raise(int sig) ;
+
+
+
+killpg()를 통한 시그널 전송
+- 프로세스 그룹의 모든 맴버에게 시그널을 전송한다.  
+
+#include <sys/types.h>
+#include <signal.h>
+
+int killpg(pid_t pgrp, int sig) ;

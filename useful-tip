@@ -1,0 +1,27 @@
+git init
+git add <file-name-1> <file-name-2> <file-name-3>
+git commit -m "중간고사 소스"
+git remote add origin https://github.com/TF121/Middle-Exam.git
+git push -u origin master
+
+git clone https://github.com/TF121/Middle-Exam.git
+
+u : 되돌리기, 버퍼가 빌 때까지 가능
+= (=) intended line 줄 정리
+
+2.txt 내부에서 esc
+sp 3.txt 
+
+v + 방향키 이용 + yy(복사)
+p(붙여넣기)
+
+ctrl + Insert : 복사
+Shift + Delete : 잘라내기
+클립보드의 내용을 붙여 넣을 경우
+Shift + Insert : 붙여넣기
+
+2.txt 파일에서 esc 
+w 3.txt
+
+소스 정렬 v로 블럭잡고 = 키 누르기 (or) esc 누르고 gg=G 입력
+줄 번호 이동은 esc -> 원하는 줄번호 입력 후 shift+G
