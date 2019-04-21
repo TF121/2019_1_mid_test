@@ -1,8 +1,13 @@
 git init
-git add <file-name-1> <file-name-2> <file-name-3>,        git add ./폴더이름/ (이 방법도 있음)
-git commit -m "중간고사 소스"
-git remote add origin https://github.com/TF121/Middle-Exam.git
+
+git add <file-name-1> <file-name-2> <file-name-3>,
+git add ./폴더이름/ (이 방법도 있음)
+
+git commit -m "파일이나 폴더에 대한 부가 설명"
+git remote add origin https://github.com/TF121/저장소-이름.git
+
 git push -u origin master (에러나면 git pull origin master 한 다음에 실행 원래있던 거랑 병합하는 과정)
+git push origin +master (이건 pull 없이 강제로 올리는거)
 
 ctrl + Z 나가기 (nano 들어가질때)
 
