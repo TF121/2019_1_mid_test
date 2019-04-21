@@ -2,7 +2,7 @@ git init
 git add <file-name-1> <file-name-2> <file-name-3>
 git commit -m "중간고사 소스"
 git remote add origin https://github.com/TF121/Middle-Exam.git
-git push -u origin master
+git push -u origin master (에러나면 git pull origin master 한 다음에 실행 원래있던 거랑 병합하는 과정)
 
 git clone https://github.com/TF121/Middle-Exam.git
 
